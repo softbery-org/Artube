@@ -1,11 +1,59 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {}
+    "net7.0-windows7.0": {
+      "Softbery.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Softbery.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Softbery.Core.dll": {}
+        }
+      },
+      "Softbery.Logger/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Softbery.Logger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Softbery.Logger.dll": {}
+        }
+      },
+      "Softbery.Text/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Softbery.Text.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Softbery.Text.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Softbery.Core/1.0.0": {
+      "type": "project",
+      "path": "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj",
+      "msbuildProject": "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj"
+    },
+    "Softbery.Logger/1.0.0": {
+      "type": "project",
+      "path": "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj",
+      "msbuildProject": "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj"
+    },
+    "Softbery.Text/1.0.0": {
+      "type": "project",
+      "path": "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj",
+      "msbuildProject": "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": []
+    "net7.0-windows7.0": [
+      "Softbery.Core >= 1.0.0",
+      "Softbery.Logger >= 1.0.0",
+      "Softbery.Text >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\softb\\.nuget\\packages\\": {},
@@ -39,7 +87,17 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj": {
+              "projectPath": "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj"
+            },
+            "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj": {
+              "projectPath": "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj"
+            },
+            "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj": {
+              "projectPath": "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

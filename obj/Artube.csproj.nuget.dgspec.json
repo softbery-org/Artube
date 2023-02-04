@@ -32,7 +32,17 @@
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj": {
+                "projectPath": "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj"
+              },
+              "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj": {
+                "projectPath": "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj"
+              },
+              "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj": {
+                "projectPath": "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -65,6 +75,51 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj",
+        "projectName": "Softbery.Core",
+        "projectPath": "E:\\Projects\\C#\\Softbery.Core\\Softbery.Core.csproj",
+        "frameworks": {
+          "net481": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net481": {}
+      }
+    },
+    "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj",
+        "projectName": "Softbery.Logger",
+        "projectPath": "E:\\Projects\\C#\\Softbery.Logger\\Softbery.Logger.csproj",
+        "frameworks": {
+          "net481": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net481": {}
+      }
+    },
+    "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj",
+        "projectName": "Softbery.Text",
+        "projectPath": "E:\\Projects\\C#\\Softbery.Text\\Softbery.Text.csproj",
+        "frameworks": {
+          "net481": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net481": {}
       }
     }
   }

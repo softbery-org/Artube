@@ -8,4 +8,31 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="E:\Projects\C#\Softbery.Core\Softbery.Core.csproj" />
+    <ProjectReference Include="E:\Projects\C#\Softbery.Logger\Softbery.Logger.csproj" />
+    <ProjectReference Include="E:\Projects\C#\Softbery.Text\Softbery.Text.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="YoutubeExplode">
+      <HintPath>E:\Projects\cs\YoutubeExplode\YoutubeExplode\bin\Debug\net5.0\YoutubeExplode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

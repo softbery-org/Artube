@@ -1,8 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="src\Containers\BottomBarPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Containers\ContentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Containers\MenuBarPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Containers\TopBarPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Contents\ArtubeMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Contents\Logs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Contents\Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormBottomBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormMenuStripControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlbtnXAppMessages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlbtnXClose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlbtnXHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlbtnXMaximalize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlbtnXMinimalize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlLabelName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="src\UserControls\FormTopBarControlLogo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
