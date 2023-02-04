@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softbery.Text", "E:\Project
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softbery.Core", "E:\Projects\C#\Softbery.Core\Softbery.Core.csproj", "{1EADC665-5CEA-467B-B83F-831271753419}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softbery.Archive", "E:\Projects\C#\Softbery.Archive\Softbery.Archive.csproj", "{336BB2F5-BBF5-4BA8-A47A-B25A9526711B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softbery.Update", "E:\Projects\C#\Softbery.Update\Softbery.Update.csproj", "{B6EA2AE8-188C-427F-B291-5153FB7003CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{1EADC665-5CEA-467B-B83F-831271753419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EADC665-5CEA-467B-B83F-831271753419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EADC665-5CEA-467B-B83F-831271753419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336BB2F5-BBF5-4BA8-A47A-B25A9526711B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336BB2F5-BBF5-4BA8-A47A-B25A9526711B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336BB2F5-BBF5-4BA8-A47A-B25A9526711B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336BB2F5-BBF5-4BA8-A47A-B25A9526711B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6EA2AE8-188C-427F-B291-5153FB7003CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6EA2AE8-188C-427F-B291-5153FB7003CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6EA2AE8-188C-427F-B291-5153FB7003CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6EA2AE8-188C-427F-B291-5153FB7003CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
