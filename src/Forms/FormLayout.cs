@@ -39,24 +39,18 @@ using Softbery.Logger;
 
 namespace Artube.src.Forms
 {
-	public delegate void LayoutEventHandler(string name);
-	public delegate void SearchEventHandler(string phrase);
-
 	public partial class FormLayout : Form
 	{
-		private UserControl content = new UserControl();
-		private UserControl currentContent;
+		private UserControl currentContent = new UserControl();
 		private Dictionary<string, UserControl> controlsList = new Dictionary<string, UserControl>();
-
-		public event LayoutEventHandler ContentLayoutChange;
+		private string formTitle = "";
 		public FormLayout()
 		{
 			InitializeComponent();
 			this.Text = "MainLayouts";
 
 			Softbery.Core.Layout.Content.ChangeContent += ChangeContent;
-			ContentLayoutChange += ChangeContent;
-			
+
 			SetPanels();
 
 			ChangeContent("Logs");
@@ -64,6 +58,7 @@ namespace Artube.src.Forms
 			Logger.Write(new Log { Type = LogType.Information, Message = $"Create form {this.Name}" });
 
 			ChangeContent("Main");
+			src.UserControls.FormTopBarControlLabelName.SetTitle("ArTube: Main");
 		}
 
 		private void SetPanels()
@@ -80,8 +75,6 @@ namespace Artube.src.Forms
 			menu.Dock = DockStyle.Fill;
 			MenuBarPanel.Controls.Clear();
 			MenuBarPanel.Controls.Add(menu);
-
-
 		}
 
 		public void ChangeContent(string name)
@@ -96,12 +89,15 @@ namespace Artube.src.Forms
 			if (!controlsList.ContainsKey(content_name))
 			{
 				try
-				{	
-					Type type = Type.GetType($"Artube.src.Contents.{content_name}");
-					uc = (UserControl)Activator.CreateInstance(type);
-					controlsList.Add(content_name, uc);
-					this.currentContent = uc;
-					uc.CreateControl();
+				{
+					if (content_name != null)
+					{
+						Type type = Type.GetType($"Artube.src.Contents.{content_name}");
+						uc = (UserControl)Activator.CreateInstance(type);
+						controlsList.Add(content_name, uc);
+						this.currentContent = uc;
+						uc.CreateControl();
+					}
 				}
 				catch (Exception ex)
 				{
@@ -119,7 +115,7 @@ namespace Artube.src.Forms
             ContentPanel.Controls.Add(uc);
 		}
 
-		private void ClearContent(string content_name)
+		private void RemoveFromControls(string content_name)
 		{
 			controlsList.Remove(content_name);
 		}

@@ -49,7 +49,7 @@
 			this.TopBar.MaximumSize = new System.Drawing.Size(0, 72);
 			this.TopBar.MinimumSize = new System.Drawing.Size(0, 72);
 			this.TopBar.Name = "TopBar";
-			this.TopBar.Size = new System.Drawing.Size(933, 72);
+			this.TopBar.Size = new System.Drawing.Size(1063, 72);
 			this.TopBar.TabIndex = 6;
 			// 
 			// MenuBarPanel
@@ -58,15 +58,16 @@
 			this.MenuBarPanel.Location = new System.Drawing.Point(0, 36);
 			this.MenuBarPanel.Margin = new System.Windows.Forms.Padding(0);
 			this.MenuBarPanel.Name = "MenuBarPanel";
-			this.MenuBarPanel.Size = new System.Drawing.Size(933, 30);
+			this.MenuBarPanel.Size = new System.Drawing.Size(1063, 30);
 			this.MenuBarPanel.TabIndex = 1;
 			// 
 			// TopBarPanel
 			// 
+			this.TopBarPanel.AutoSize = true;
 			this.TopBarPanel.Location = new System.Drawing.Point(0, 0);
 			this.TopBarPanel.Margin = new System.Windows.Forms.Padding(0);
 			this.TopBarPanel.Name = "TopBarPanel";
-			this.TopBarPanel.Size = new System.Drawing.Size(933, 36);
+			this.TopBarPanel.Size = new System.Drawing.Size(1063, 36);
 			this.TopBarPanel.TabIndex = 0;
 			// 
 			// BottomBarPanel
@@ -78,7 +79,7 @@
 			this.BottomBarPanel.MaximumSize = new System.Drawing.Size(0, 25);
 			this.BottomBarPanel.MinimumSize = new System.Drawing.Size(0, 25);
 			this.BottomBarPanel.Name = "BottomBarPanel";
-			this.BottomBarPanel.Size = new System.Drawing.Size(933, 25);
+			this.BottomBarPanel.Size = new System.Drawing.Size(1063, 25);
 			this.BottomBarPanel.TabIndex = 8;
 			// 
 			// bottomBarPanel1
@@ -88,7 +89,7 @@
 			this.bottomBarPanel1.Location = new System.Drawing.Point(0, 0);
 			this.bottomBarPanel1.Margin = new System.Windows.Forms.Padding(0);
 			this.bottomBarPanel1.Name = "bottomBarPanel1";
-			this.bottomBarPanel1.Size = new System.Drawing.Size(933, 25);
+			this.bottomBarPanel1.Size = new System.Drawing.Size(1063, 25);
 			this.bottomBarPanel1.TabIndex = 0;
 			// 
 			// ContentPanel
@@ -98,7 +99,7 @@
 			this.ContentPanel.Location = new System.Drawing.Point(0, 72);
 			this.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
 			this.ContentPanel.Name = "ContentPanel";
-			this.ContentPanel.Size = new System.Drawing.Size(933, 422);
+			this.ContentPanel.Size = new System.Drawing.Size(1063, 422);
 			this.ContentPanel.TabIndex = 9;
 			// 
 			// FormLayout
@@ -106,7 +107,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(933, 519);
+			this.ClientSize = new System.Drawing.Size(1063, 519);
 			this.Controls.Add(this.ContentPanel);
 			this.Controls.Add(this.TopBar);
 			this.Controls.Add(this.BottomBarPanel);

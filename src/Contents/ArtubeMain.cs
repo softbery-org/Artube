@@ -36,9 +36,6 @@ namespace Artube.src.Contents
 	public partial class ArtubeMain : UserControl
 	{
 		public delegate List<Video> DelegateSearchList(string phrase);
-		private double trackprogress;
-		private double mainprogress;
-
 		public double MainProgress
 		{
 			get => mainprogress;
@@ -56,13 +53,13 @@ namespace Artube.src.Contents
 		private Progress<double> mainProgressHandle;
 		private int currentTrackProgress = 0;
 		private int totalTracksToProgress = 0;
-		CancellationToken cancellation;
-
-		List<string> urls;
-		string downloadpath = AppDomain.CurrentDomain.BaseDirectory + @"downloaded\";
-		//int selected = 0;
-		List<int> selected = new List<int>();
-		YoutubeExplode.YoutubeClient youtube = new YoutubeExplode.YoutubeClient();
+		private CancellationToken cancellation;
+		private List<string> urls;
+		private string downloadpath = AppDomain.CurrentDomain.BaseDirectory + @"downloaded\";
+		private List<int> selected = new List<int>();
+		private double trackprogress;
+		private double mainprogress;
+		
 
 		public ArtubeMain()
 		{
@@ -73,6 +70,7 @@ namespace Artube.src.Contents
 			progressHandle.ProgressChanged += ProgressHandle_ProgressChanged;
 			mainProgressHandle.ProgressChanged += MainProgressHandle_ProgressChanged;
 			downloadSelectedTracks.Enabled = false;
+			
 			Logger.Write(new Log { Type = LogType.Information, Message = "Open/Create Artube window ..." });
 		}
 

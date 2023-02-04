@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace Artube.src.UserControls
 {
-    public partial class FormTopBarControlLabelName : UserControl
+    public delegate void TopBarControlLabelNameHandler(string labelName);
+
+	public partial class FormTopBarControlLabelName : UserControl
     {
         #region [SOF: DEFINED VERIABLES]
         /// <summary>
@@ -23,10 +25,16 @@ namespace Artube.src.UserControls
         /// Mouse location veriable on the screen
         /// </summary>
         private Point getMouseLocation;
-        /*/// <summary>
-        /// The state of number form child
+        /// <summary>
+        /// 
         /// </summary>
-        private int childFormNumber = 0;*/
+        public event TopBarControlLabelNameHandler TopBarControlLabelNameEventHandler;
+        public static Action<string> SetTitle;
+        private string title;
+        public string Title {
+            get => title;
+            private set => title = value;
+        }
         #endregion
 
         #region [FORM]
@@ -36,13 +44,13 @@ namespace Artube.src.UserControls
         public FormTopBarControlLabelName()
         {
             InitializeComponent();
+            SetTitle += SetLabel;
         }
         #endregion
 
-        private void setTopBarLabelText()
+        public void SetLabel(string text)
         {
-			var f = (Forms.FormLayout)this.FindForm();
-            this.topBarLabelFormName.Text = f.Text;
+			this.topBarLabelFormName.Text = text;
 		}
 
         #region [SOF: MOUSE EVENTS]

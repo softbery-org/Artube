@@ -42,7 +42,7 @@ namespace Artube.src.UserControls
         public FormMenuStripControl()
         {
             InitializeComponent();
-            // SetSettingsDictionary();
+            SetSettingsDictionary();
             
             searchStripComboBox.Enabled = true;
 		}
@@ -138,6 +138,7 @@ namespace Artube.src.UserControls
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			Softbery.Core.Layout.Content.ChangeContent("Logs");
+			src.UserControls.FormTopBarControlLabelName.SetTitle("ArTube: Logs");
 		}
 
         private void showWebsiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -153,6 +154,7 @@ namespace Artube.src.UserControls
         private void informationsAboutSofToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			Softbery.Core.Layout.Content.ChangeContent("About");
+			src.UserControls.FormTopBarControlLabelName.SetTitle("ArTube: About");
 		}
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,11 +165,13 @@ namespace Artube.src.UserControls
 		private void ArTubeToolStripMenuItem_Click(object sender, EventArgs e)
 		{
             Softbery.Core.Layout.Content.ChangeContent("ArtubeMain");
+			src.UserControls.FormTopBarControlLabelName.SetTitle("ArTube: Main");
 		}
 
 		private void LogsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Softbery.Core.Layout.Content.ChangeContent("Logs");
+			src.UserControls.FormTopBarControlLabelName.SetTitle("ArTube: Logs");
 		}
 
         private bool RunSearch(string phrase)

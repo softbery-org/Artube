@@ -1,0 +1,13 @@
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Artube.exe
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Artube.dll
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Artube.deps.json
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Artube.runtimeconfig.json
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Artube.pdb
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Softbery.Core.dll
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Softbery.Logger.dll
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Softbery.Text.dll
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\YoutubeExplode.dll
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Softbery.Core.pdb
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Softbery.Logger.pdb
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\Softbery.Text.pdb
+C:\Users\softb\OneDrive\Pulpit\Artube\bin\Release\net7.0-windows\app.publish\YoutubeExplode.xml
