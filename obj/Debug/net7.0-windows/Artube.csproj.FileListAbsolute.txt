@@ -41,3 +41,4 @@ C:\Users\softb\OneDrive\Pulpit\Artube\obj\Debug\net7.0-windows\refint\Artube.dll
 C:\Users\softb\OneDrive\Pulpit\Artube\obj\Debug\net7.0-windows\Artube.pdb
 C:\Users\softb\OneDrive\Pulpit\Artube\obj\Debug\net7.0-windows\Artube.genruntimeconfig.cache
 C:\Users\softb\OneDrive\Pulpit\Artube\obj\Debug\net7.0-windows\ref\Artube.dll
+C:\Users\softb\OneDrive\Pulpit\Artube\obj\Debug\net7.0-windows\Artube.src.Forms.FormLayout.resources

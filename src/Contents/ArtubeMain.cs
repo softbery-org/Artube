@@ -36,15 +36,26 @@ namespace Artube.src.Contents
 	public partial class ArtubeMain : UserControl
 	{
 		public delegate List<Video> DelegateSearchList(string phrase);
+		private double trackprogress;
+		private double mainprogress;
+
+		public double MainProgress
+		{
+			get => mainprogress;
+			private set => mainprogress = value;
+		}
+		public double TrackProgress
+		{
+			get => trackprogress;
+			private set => trackprogress = value;
+		}
 
 		private YoutubeClient client;
 		private static List<Video> playlist = new List<Video>();
-		private bool comboBox = true;
-		private Video video;
-		private int trackProgress = 0;
-		private int totalProgress = 0;
-		private bool complete = false;
-
+		private Progress<double> progressHandle;
+		private Progress<double> mainProgressHandle;
+		private int currentTrackProgress = 0;
+		private int totalTracksToProgress = 0;
 		CancellationToken cancellation;
 
 		List<string> urls;
@@ -57,6 +68,10 @@ namespace Artube.src.Contents
 		{
 			InitializeComponent();
 			CreateDirectories();
+			progressHandle = new Progress<double>(p => TrackProgress = p);
+			mainProgressHandle = new Progress<double>(p => MainProgress = p);
+			progressHandle.ProgressChanged += ProgressHandle_ProgressChanged;
+			mainProgressHandle.ProgressChanged += MainProgressHandle_ProgressChanged;
 			downloadSelectedTracks.Enabled = false;
 			Logger.Write(new Log { Type = LogType.Information, Message = "Open/Create Artube window ..." });
 		}
@@ -176,96 +191,56 @@ namespace Artube.src.Contents
 			GetYoutubeTrackList();
 		}
 
-		private async Task DownloadTrack(Video video, IProgress<double> progress = null)
-		{
-			var sm = client.Videos.Streams.GetManifestAsync(video.Id).Result;
-			var smi = sm.GetAudioOnlyStreams().GetWithHighestBitrate();
-			Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Download progress. Reason: {smi.Size.MegaBytes}" });
-			await client.Videos.Streams.DownloadAsync(smi, downloadpath + video.Title + ".mp3", progress);				
-			Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Download progress. Reason: {progress}" });
-		}
-
-		async Task Progress2()
-		{
-			bool complete = false;
-			int totalProgress = trackDataGridView.SelectedRows.Count*100;
-			await Task.Run(() =>
-			{
-				while (!complete)
-				{
-					if (trackProgress != 0 && totalProgress != 0)
-					{
-						trackProgressBar.Invoke(new Action(() =>
-						{
-							trackProgressBar.Value = (int)(trackProgress / totalProgress) * 100;	
-					}));
-					}
-				}
-			});
-		}
-
-		public double _progress;
-		public double Progress
-		{
-			get => _progress;
-			private set => _progress = value;
-		}
-
 		private async Task StartDownloadStreamAsync(Video video, IProgress<double> progress=null)
 		{
 			downloadSelectedTracks.Enabled = false;
 			try
 			{
-				Progress = 0;
+				TrackProgress = 0;
 				client = new YoutubeClient();
 				var sm = await client.Videos.Streams.GetManifestAsync(video.Id);
 				var smi = sm.GetAudioOnlyStreams().GetWithHighestBitrate();
-				var progressHandle = new Progress<double>(p => Progress = p);
-				Invoke((MethodInvoker)delegate {
-					
-				});
 				await client.Videos.Streams.DownloadAsync(smi, downloadpath+video.Title+".mp3", progressHandle);
 			}
 			finally
 			{
-				Progress = 0;
+				TrackProgress = 0;
 			}
 			downloadSelectedTracks.Enabled = true;
 		}
 
+		private void MainProgressHandle_ProgressChanged(object? sender, double e)
+		{
+			Invoke((MethodInvoker)delegate {
+				mainProgressBarWithText.Value = (int)((int)(currentTrackProgress *e) / totalTracksToProgress) * 100;
+			});
+		}
+
+		private void ProgressHandle_ProgressChanged(object? sender, double e)
+		{
+			Invoke((MethodInvoker)delegate {
+				trackProgressBarWithText.Value = (int)(e / 1) * 100;
+			});
+		}
 
 		private async void DownloadSelectedTracks_Click(object sender, EventArgs e)
 		{
 			client = new YoutubeClient();
+			totalTracksToProgress = selected.Count;
+			currentTrackProgress = 1;
 			foreach (var item in selected)
 			{
 				Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Download Start: "+item });
 				await StartDownloadStreamAsync(playlist[item]);
 				
-				/*
-							Invoke((MethodInvoker)delegate { textBox1.Text = "Test"; });
-				*/
-
-				//DownloadTrack(playlist[item]);
-				/*Progress<double> trackprogress = new Progress<double>(percent =>
-				{
-					trackProgressBar.Value = (int)percent;
-				});
-				trackProgressBar.Invoke(new Action(() =>
-				{
-					DownloadTrack(playlist[item]);
-				}));*/
-
-				//await Progress();
+				currentTrackProgress++;
 			}
 			Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Download completed." });
 		}
 
 		private void CancellationButton_Click(object sender, EventArgs e)
 		{
-			this.Invoke(new Action(()=>{
-				
-			}));
+			//cancellation = 
 		}
 	}
 }

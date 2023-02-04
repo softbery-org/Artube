@@ -22,12 +22,12 @@ namespace Artube.src.UserControls
             if (this.FindForm().WindowState != FormWindowState.Maximized)
             {
                 this.FindForm().WindowState = FormWindowState.Maximized;
-                btnXMaximalize.Image = Image.FromFile(Artube.Globals.ApplicationPath+"images/Commons/minimalize_view_16xLG.png");
+                btnXMaximalize.Image = global::Artube.Properties.Resources.minimalize_view_16xLG;
             }
             else
             {
                 this.FindForm().WindowState = FormWindowState.Normal;
-                btnXMaximalize.Image = Image.FromFile(Artube.Globals.ApplicationPath + "images/Commons/application_16xLG.png");
+                btnXMaximalize.Image = global::Artube.Properties.Resources.application_16xLG;
 
 			}
         }

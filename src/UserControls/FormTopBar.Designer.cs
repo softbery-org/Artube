@@ -44,7 +44,7 @@
 			this.formTopBarControlLogo1.Location = new System.Drawing.Point(0, 0);
 			this.formTopBarControlLogo1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlLogo1.Name = "formTopBarControlLogo1";
-			this.formTopBarControlLogo1.Size = new System.Drawing.Size(31, 31);
+			this.formTopBarControlLogo1.Size = new System.Drawing.Size(36, 36);
 			this.formTopBarControlLogo1.TabIndex = 0;
 			// 
 			// formTopBarControlLabelName1
@@ -53,10 +53,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.formTopBarControlLabelName1.AutoSize = true;
 			this.formTopBarControlLabelName1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.formTopBarControlLabelName1.Location = new System.Drawing.Point(31, 0);
+			this.formTopBarControlLabelName1.Location = new System.Drawing.Point(36, 0);
 			this.formTopBarControlLabelName1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlLabelName1.Name = "formTopBarControlLabelName1";
-			this.formTopBarControlLabelName1.Size = new System.Drawing.Size(592, 31);
+			this.formTopBarControlLabelName1.Size = new System.Drawing.Size(687, 36);
 			this.formTopBarControlLabelName1.TabIndex = 1;
 			// 
 			// formTopBarControlbtnXClose1
@@ -64,9 +64,10 @@
 			this.formTopBarControlbtnXClose1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.formTopBarControlbtnXClose1.AutoSize = true;
 			this.formTopBarControlbtnXClose1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.formTopBarControlbtnXClose1.Location = new System.Drawing.Point(747, 0);
+			this.formTopBarControlbtnXClose1.Location = new System.Drawing.Point(867, 0);
+			this.formTopBarControlbtnXClose1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlbtnXClose1.Name = "formTopBarControlbtnXClose1";
-			this.formTopBarControlbtnXClose1.Size = new System.Drawing.Size(31, 31);
+			this.formTopBarControlbtnXClose1.Size = new System.Drawing.Size(36, 36);
 			this.formTopBarControlbtnXClose1.TabIndex = 2;
 			// 
 			// formTopBarControlbtnXMaximalize1
@@ -74,9 +75,10 @@
 			this.formTopBarControlbtnXMaximalize1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.formTopBarControlbtnXMaximalize1.AutoSize = true;
 			this.formTopBarControlbtnXMaximalize1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.formTopBarControlbtnXMaximalize1.Location = new System.Drawing.Point(716, 0);
+			this.formTopBarControlbtnXMaximalize1.Location = new System.Drawing.Point(831, 0);
+			this.formTopBarControlbtnXMaximalize1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlbtnXMaximalize1.Name = "formTopBarControlbtnXMaximalize1";
-			this.formTopBarControlbtnXMaximalize1.Size = new System.Drawing.Size(31, 31);
+			this.formTopBarControlbtnXMaximalize1.Size = new System.Drawing.Size(36, 36);
 			this.formTopBarControlbtnXMaximalize1.TabIndex = 3;
 			// 
 			// formTopBarControlbtnXMinimalize1
@@ -84,12 +86,12 @@
 			this.formTopBarControlbtnXMinimalize1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.formTopBarControlbtnXMinimalize1.AutoSize = true;
 			this.formTopBarControlbtnXMinimalize1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(96)))), ((int)(((byte)(130)))));
-			this.formTopBarControlbtnXMinimalize1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.formTopBarControlbtnXMinimalize1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.formTopBarControlbtnXMinimalize1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.formTopBarControlbtnXMinimalize1.Location = new System.Drawing.Point(685, 0);
+			this.formTopBarControlbtnXMinimalize1.Location = new System.Drawing.Point(795, 0);
 			this.formTopBarControlbtnXMinimalize1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlbtnXMinimalize1.Name = "formTopBarControlbtnXMinimalize1";
-			this.formTopBarControlbtnXMinimalize1.Size = new System.Drawing.Size(31, 31);
+			this.formTopBarControlbtnXMinimalize1.Size = new System.Drawing.Size(36, 36);
 			this.formTopBarControlbtnXMinimalize1.TabIndex = 4;
 			// 
 			// formTopBarControlbtnXHelp1
@@ -97,9 +99,10 @@
 			this.formTopBarControlbtnXHelp1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.formTopBarControlbtnXHelp1.AutoSize = true;
 			this.formTopBarControlbtnXHelp1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.formTopBarControlbtnXHelp1.Location = new System.Drawing.Point(654, 0);
+			this.formTopBarControlbtnXHelp1.Location = new System.Drawing.Point(759, 0);
+			this.formTopBarControlbtnXHelp1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlbtnXHelp1.Name = "formTopBarControlbtnXHelp1";
-			this.formTopBarControlbtnXHelp1.Size = new System.Drawing.Size(31, 31);
+			this.formTopBarControlbtnXHelp1.Size = new System.Drawing.Size(36, 36);
 			this.formTopBarControlbtnXHelp1.TabIndex = 5;
 			// 
 			// formTopBarControlbtnXAppMessages1
@@ -108,16 +111,17 @@
 			this.formTopBarControlbtnXAppMessages1.AutoSize = true;
 			this.formTopBarControlbtnXAppMessages1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(76)))), ((int)(((byte)(130)))));
 			this.formTopBarControlbtnXAppMessages1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.formTopBarControlbtnXAppMessages1.Location = new System.Drawing.Point(623, 0);
+			this.formTopBarControlbtnXAppMessages1.Location = new System.Drawing.Point(723, 0);
 			this.formTopBarControlbtnXAppMessages1.Margin = new System.Windows.Forms.Padding(0);
 			this.formTopBarControlbtnXAppMessages1.Name = "formTopBarControlbtnXAppMessages1";
-			this.formTopBarControlbtnXAppMessages1.Size = new System.Drawing.Size(31, 31);
+			this.formTopBarControlbtnXAppMessages1.Size = new System.Drawing.Size(36, 36);
 			this.formTopBarControlbtnXAppMessages1.TabIndex = 6;
 			// 
 			// FormTopBar
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSize = true;
 			this.Controls.Add(this.formTopBarControlbtnXAppMessages1);
 			this.Controls.Add(this.formTopBarControlbtnXHelp1);
 			this.Controls.Add(this.formTopBarControlbtnXMinimalize1);
@@ -127,7 +131,7 @@
 			this.Controls.Add(this.formTopBarControlLogo1);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "FormTopBar";
-			this.Size = new System.Drawing.Size(778, 31);
+			this.Size = new System.Drawing.Size(903, 36);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

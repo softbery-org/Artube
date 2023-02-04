@@ -53,7 +53,7 @@
 			this.progressToolStripStatusLabel.Name = "progressToolStripStatusLabel";
 			this.progressToolStripStatusLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.progressToolStripStatusLabel.Size = new System.Drawing.Size(58, 17);
-			this.progressToolStripStatusLabel.Text = "Progress: ";
+			this.progressToolStripStatusLabel.Text = "TrackProgress: ";
 			// 
 			// progressToolStripProgressBar
 			// 
