@@ -41,7 +41,7 @@ namespace Artube.src.Contents
 		{
 			InitializeComponent();
 			Logger.Write += AddLogMessage;
-			Logger.Write(new Log { Type = LogType.Information, Message = $"Create control {this.Name}" });
+			Logger.Write(new Log { Type = LogTypes.Information, Message = $"Create control {this.Name}" });
 		}
 
 		/// <summary>
@@ -56,16 +56,16 @@ namespace Artube.src.Contents
 
 			switch (log.Type)
 			{
-				case Softbery.Logger.LogType.Information:
+				case Softbery.Logger.LogTypes.Information:
 					color = Color.Blue;
 					break;
-				case Softbery.Logger.LogType.Warning:
+				case Softbery.Logger.LogTypes.Warning:
 					color = Color.Orange;
 					break;
-				case Softbery.Logger.LogType.Error:
+				case Softbery.Logger.LogTypes.Error:
 					color = Color.Red;
 					break;
-				case Softbery.Logger.LogType.Success:
+				case Softbery.Logger.LogTypes.Success:
 					color = Color.Green;
 					break;
 				default:

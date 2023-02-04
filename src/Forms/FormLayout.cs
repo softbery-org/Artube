@@ -55,7 +55,7 @@ namespace Artube.src.Forms
 
 			ChangeContent("Logs");
 
-			Logger.Write(new Log { Type = LogType.Information, Message = $"Create form {this.Name}" });
+			Logger.Write(new Log { Type = LogTypes.Information, Message = $"Create form {this.Name}" });
 
 			ChangeContent("Main");
 			src.UserControls.FormTopBarControlLabelName.SetTitle("ArTube: Main");

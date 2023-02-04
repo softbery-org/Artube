@@ -71,7 +71,7 @@ namespace Artube.src.Contents
 			mainProgressHandle.ProgressChanged += MainProgressHandle_ProgressChanged;
 			downloadSelectedTracks.Enabled = false;
 			
-			Logger.Write(new Log { Type = LogType.Information, Message = "Open/Create Artube window ..." });
+			Logger.Write(new Log { Type = LogTypes.Information, Message = "Open/Create Artube window ..." });
 		}
 
 		public void CreateDirectories()
@@ -84,7 +84,7 @@ namespace Artube.src.Contents
 				}
 				catch (Exception)
 				{
-					Logger.Write(new Log { Type = LogType.Error, Message = "Can't create needed folder. Please contact with system administrator." });
+					Logger.Write(new Log { Type = LogTypes.Error, Message = "Can't create needed folder. Please contact with system administrator." });
 				}
 			}
 		}
@@ -126,7 +126,7 @@ namespace Artube.src.Contents
 			}
 			else
 			{
-				Softbery.Logger.Logger.Write(new Log() { Type = Softbery.Logger.LogType.Error, Message = $"Folder: {this.downloadpath}. Not exist"});
+				Softbery.Logger.Logger.Write(new Log() { Type = Softbery.Logger.LogTypes.Error, Message = $"Folder: {this.downloadpath}. Not exist"});
 			}
 		}
 
@@ -165,7 +165,7 @@ namespace Artube.src.Contents
 			}
 			catch (Exception ex)
 			{
-				Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Url is not youtube track. Reason: {ex.Message}" });
+				Softbery.Logger.Logger.Write(new Log { Type = LogTypes.Error, Message = $"Url is not youtube track. Reason: {ex.Message}" });
 			}
 
 			try
@@ -178,7 +178,7 @@ namespace Artube.src.Contents
 			}
 			catch (Exception ex)
 			{
-				Softbery.Logger.Logger.Write(new Log { Type=LogType.Error, Message=$"Url is not youtube track. Reason: {ex.Message}"});
+				Softbery.Logger.Logger.Write(new Log { Type=LogTypes.Error, Message=$"Url is not youtube track. Reason: {ex.Message}"});
 			}
 
 			getListBtn.Enabled = true;
@@ -228,12 +228,12 @@ namespace Artube.src.Contents
 			currentTrackProgress = 1;
 			foreach (var item in selected)
 			{
-				Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Download Start: "+item });
+				Softbery.Logger.Logger.Write(new Log { Type = LogTypes.Error, Message = $"Download Start: "+item });
 				await StartDownloadStreamAsync(playlist[item]);
 				
 				currentTrackProgress++;
 			}
-			Softbery.Logger.Logger.Write(new Log { Type = LogType.Error, Message = $"Download completed." });
+			Softbery.Logger.Logger.Write(new Log { Type = LogTypes.Error, Message = $"Download completed." });
 		}
 
 		private void CancellationButton_Click(object sender, EventArgs e)
